@@ -1,12 +1,6 @@
 #include "XLR8DMem.h"
-
-XLR8DMemClass::XLR8DMemClass()
-{
-}
-
-XLR8DMemClass::~XLR8DMemClass()
-{
-}
+  
+namespace XLR8DMemLib {
 
 void XLR8DMemClass::write(uint16_t addr, uint8_t * data, int len, int stride)
 {
@@ -29,4 +23,6 @@ void XLR8DMemClass::read(uint16_t addr, uint8_t * data, int len, int stride)
 }
 
 XLR8DMemClass XLR8DMem;
+
+};
 

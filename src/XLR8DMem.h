@@ -51,16 +51,20 @@
 #define XLR8_DMEM_STRIDE_REG _SFR_MEM8(0xDA)
 #define XLR8_DMEM_DATA_REG   _SFR_MEM8(0xDB)
 
+namespace XLR8DMemLib {
+
 class XLR8DMemClass
 {
 public:
-  XLR8DMemClass();
-  ~XLR8DMemClass();
   void write(uint16_t addr, uint8_t * data, int len = 1, int stride = 1);
   void read (uint16_t addr, uint8_t * data, int len = 1, int stride = 1);
-}
+};
 
 extern XLR8DMemClass XLR8DMem;
+
+};
+
+using namespace XLR8DMemLib;
 
 #endif // XLR8DMEM_H
 
