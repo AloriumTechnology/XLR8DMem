@@ -9,6 +9,10 @@
  Use the read and write functions of XLR8DMem to access memory blocks 
  on an Alorium board built with the XLR8DMem XB.
 
+ This is generally intended for use with an Alorium Hinj board running
+ an image built with the XLR8DMem XB, and will not work on an XLR8 or
+ Sno unless you adapt a custom image for it.
+
  Access writes via XLR8DMem.write(address, data, length, stride), 
  where address is a 16 bit address of the starting memory location, 
  data is a pointer to an 8 bit data container, length is an integer 
